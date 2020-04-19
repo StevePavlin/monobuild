@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  test:
+    container_name: test
+    image: test
+    command: yarn test:watch
+    build:
+      context: .
+
+    volumes:
+      - .:/home/tooling
+      - /home/tooling/node_modules
